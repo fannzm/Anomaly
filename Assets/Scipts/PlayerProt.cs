@@ -31,6 +31,8 @@ public class PlayerProt : MonoBehaviour
 
     public MouseLook mouseLook;
 
+    public TabletUI tabletUI;
+
     void Start()
     {
         openTab = false;
@@ -38,12 +40,7 @@ public class PlayerProt : MonoBehaviour
 
         characterController = Player.GetComponent<CharacterController>();
 
-        Room2.SetActive(false);
-        Room3.SetActive(false);
-        Room4.SetActive(false);
-        Room5.SetActive(false);
-
-
+        TeleportToRoom(1);
 
        // Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 
@@ -57,24 +54,21 @@ public class PlayerProt : MonoBehaviour
         {
             
             if (openTab == false)
-            {   
+            {
                 mouseLook.enabled = false;
                // Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
                 print("pressed");
                 UiTablet.SetActive(true);
+                tabletUI.ShowLockScreen();
+                tabletUI.codeInputField.ActivateInputField();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = false;
                 openTab = true;
             }
             else
             {
-                mouseLook.enabled = true;
-                UiTablet.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                openTab = false;
+                CloseTablet();
             }
-
 
         }
         //if (Input.GetKeyDown(KeyCode.E) && openTab == true)
@@ -85,72 +79,61 @@ public class PlayerProt : MonoBehaviour
 
         //}
 
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if(openTab == false)
         {
-            characterController.enabled = false;
-            Player.position = spwanPointRoom1.transform.position;
-            characterController.enabled = true;
+                if (Input.GetKeyDown(KeyCode.Alpha1)) TeleportToRoom(1);
+                if (Input.GetKeyDown(KeyCode.Alpha2)) TeleportToRoom(2);
+                if (Input.GetKeyDown(KeyCode.Alpha3)) TeleportToRoom(3);
+                if (Input.GetKeyDown(KeyCode.Alpha4)) TeleportToRoom(4);
+                if (Input.GetKeyDown(KeyCode.Alpha5)) TeleportToRoom(5);
+        }       
 
-            Room1.SetActive(true);
-            Room2.SetActive(false);
-            Room3.SetActive(false);
-            Room4.SetActive(false);
-            Room5.SetActive(false);
+        
+    }
 
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+    public void TeleportToRoom(int roomNumber)
+    {
+        characterController.enabled = false;
+
+        Room1.SetActive(false);
+        Room2.SetActive(false);
+        Room3.SetActive(false);
+        Room4.SetActive(false);
+        Room5.SetActive(false);
+
+        GameObject activeRoom = null;
+        GameObject activeSpawn = null;
+
+        if (roomNumber == 1) { activeRoom = Room1; activeSpawn = spwanPointRoom1; }
+        else if (roomNumber == 2) { activeRoom = Room2; activeSpawn = spwanPointRoom2; }
+        else if (roomNumber == 3) { activeRoom = Room3; activeSpawn = spwanPointRoom3; }
+        else if (roomNumber == 4) { activeRoom = Room4; activeSpawn = spwanPointRoom4; }
+        else if (roomNumber == 5) { activeRoom = Room5; activeSpawn = spwanPointRoom5; }
+
+        if (activeRoom != null && activeSpawn != null)
         {
-            characterController.enabled = false;
-            Player.position = spwanPointRoom2.transform.position;
-            characterController.enabled = true;
+            Player.position = activeSpawn.transform.position;
+            Player.rotation = activeSpawn.transform.rotation;
+            activeRoom.SetActive(true);
 
-            Room1.SetActive(false);
-            Room2.SetActive(true);
-            Room3.SetActive(false);
-            Room4.SetActive(false);
-            Room5.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            characterController.enabled = false;
-            Player.position = spwanPointRoom3.transform.position;
-            characterController.enabled = true;
-
-            Room1.SetActive(false);
-            Room2.SetActive(false);
-            Room3.SetActive(true);
-            Room4.SetActive(false);
-            Room5.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            characterController.enabled = false;
-            Player.position = spwanPointRoom4.transform.position;
-            characterController.enabled = true;
-
-            Room1.SetActive(false);
-            Room2.SetActive(false);
-            Room3.SetActive(false);
-            Room4.SetActive(true);
-            Room5.SetActive(false);
+            RoomState rs = activeRoom.GetComponent<RoomState>();
+            if (rs != null)
+            {
+                tabletUI.currentRoom = rs;
+                tabletUI.gameManager.GenerateNewCode(rs);
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            characterController.enabled = false;
-            Player.position = spwanPointRoom5.transform.position;
-            characterController.enabled = true;
+        characterController.enabled = true;
+    }
 
-            Room1.SetActive(false);
-            Room2.SetActive(false);
-            Room3.SetActive(false);
-            Room4.SetActive(false);
-            Room5.SetActive(true);
-        }
+    public void CloseTablet()
+    {
+        openTab = false;
+        UiTablet.SetActive(false);
 
-
-
+        mouseLook.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
