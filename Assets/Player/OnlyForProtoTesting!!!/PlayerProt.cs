@@ -29,8 +29,6 @@ public class PlayerProt : MonoBehaviour
 
     CharacterController characterController;
 
-    
-
     public TabletUI tabletUI;
 
     void Start()

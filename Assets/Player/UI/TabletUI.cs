@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -8,15 +6,15 @@ public class TabletUI : MonoBehaviour
 {
     public GameManager gameManager;
     public RoomState currentRoom;
-    
-    public PlayerProt playerScript;
 
+    [Header("Panels")]
     public GameObject lockScreenPanel;
     public GameObject submissionPanel;
-    public TMP_InputField codeInputField;
-    public Toggle AnomalyToggle;
 
-    // Start is called before the first frame update
+    [Header("Components")]
+    public TMP_InputField codeInputField;
+    public Toggle anomalyToggle;
+
     void Start()
     {
         ShowLockScreen();
@@ -27,26 +25,30 @@ public class TabletUI : MonoBehaviour
         lockScreenPanel.SetActive(true);
         submissionPanel.SetActive(false);
         codeInputField.text = "";
-        AnomalyToggle.isOn = false;
+        anomalyToggle.isOn = false;
     }
-
     public void OnCodeEntered()
     {
-        if(codeInputField.text == currentRoom.roomCode)
+        if (currentRoom == null) return;
+
+        if (codeInputField.text == currentRoom.roomCode)
         {
+            Debug.Log("Tablet: Correct code entered.");
             UnlockTablet();
         }
     }
-
     public void UnlockTablet()
     {
         lockScreenPanel.SetActive(false);
         submissionPanel.SetActive(true);
     }
-
     public void SubmitChoice()
     {
-        if(AnomalyToggle.isOn == currentRoom.hasAnomaly)
+        if (currentRoom == null) return;
+
+        bool playerGuessedAnomaly = anomalyToggle.isOn;
+
+        if (playerGuessedAnomaly == currentRoom.hasAnomaly)
         {
             gameManager.CorrectChoice();
         }
@@ -56,6 +58,5 @@ public class TabletUI : MonoBehaviour
         }
 
         ShowLockScreen();
-      //  playerScript.CloseTablet();
     }
 }

@@ -1,49 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = 0;
+    [Header("Game Settings")]
     public int winScore = 8;
-    public PlayerProt playerScript;
+    public int score = 0;
 
+    [Header("References")]
+    public RoomSpawner roomSpawner;
+
+    // Next Room 
     public void CorrectChoice()
     {
-        score ++;
+        score++;
+        Debug.Log("Correct! Current Score: " + score);
 
-        if(score >= winScore)
+        roomSpawner.RemoveCurrentRoom();
+
+        if (score >= winScore)
         {
             WinGame();
         }
-
         else
         {
-            Debug.Log("Score: " + score);
-            playerScript.TeleportToRoom(score + 1);
+            roomSpawner.SpawnNext();
         }
     }
 
+    // Reset
     public void WrongChoice()
     {
         score = 0;
-        Debug.Log("Score reset to 0");
-        playerScript.TeleportToRoom(1);
+        Debug.Log("Wrong Choice! Score reset to 0.");
 
+        roomSpawner.ResetFullPool();
+        roomSpawner.ResetProbabilities();
+        roomSpawner.SpawnMasterRoom();
     }
 
-    void WinGame()
+    // TODO: Win Game
+    private void WinGame()
     {
-        Debug.Log("You Win!");
+        Debug.Log("yay you win!");
     }
 
+    // Generates a random 4-digit code
     public void GenerateNewCode(RoomState room)
     {
         int code = Random.Range(1000, 9999);
         room.roomCode = code.ToString();
 
-        if(room.codeDisplay != null)
+        if (room.codeDisplay != null)
         {
             room.codeDisplay.text = room.roomCode;
         }

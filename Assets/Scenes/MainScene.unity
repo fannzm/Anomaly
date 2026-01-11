@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1449,6 +1449,7 @@ MonoBehaviour:
   hasAnomaly: 0
   roomCode: 
   codeDisplay: {fileID: 316035229}
+  difficulty: 0
 --- !u!1 &147478572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2728,7 @@ Transform:
   - {fileID: 1594358915}
   - {fileID: 1113267633}
   - {fileID: 128632261}
+  - {fileID: 1425253032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382615890
@@ -6130,7 +6132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Name
-      value: TestGuy1
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Layer
@@ -8297,7 +8299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Name
-      value: TestGuy5
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Layer
@@ -9039,6 +9041,7 @@ MonoBehaviour:
   hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 995063691}
+  difficulty: 3
 --- !u!1001 &1068085325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9189,7 +9192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Name
-      value: TestGuy4
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Layer
@@ -9931,6 +9934,7 @@ MonoBehaviour:
   hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 602977097}
+  difficulty: 2
 --- !u!1 &1070004000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8343248219658952724, guid: 7151bd28c768642478decee39a4687b0, type: 3}
@@ -10231,6 +10235,7 @@ MonoBehaviour:
   hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 1454489351}
+  difficulty: 1
 --- !u!1 &1116307533
 GameObject:
   m_ObjectHideFlags: 0
@@ -13112,7 +13117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Name
-      value: TestGuy2
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Layer
@@ -13565,6 +13570,65 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1834237881}
   m_SourcePrefab: {fileID: 100100000, guid: 7151bd28c768642478decee39a4687b0, type: 3}
+--- !u!1 &1425253031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425253032}
+  - component: {fileID: 1425253033}
+  m_Layer: 0
+  m_Name: RoomSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425253032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425253031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 355695548}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425253033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425253031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3ce732c66c98f429075669cf0aa46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probabilityNone: 15.01
+  probabilityEasy: 28.33
+  probabilityMedium: 28.33
+  probabilityHard: 28.33
+  reductionFactor: 0.1
+  player: {fileID: 1711806637}
+  controller: {fileID: 1711806638}
+  tabletUI: {fileID: 1428177041}
+  gameManager: {fileID: 1678071447}
+  allSourceRooms:
+  - {fileID: 128632264}
+  - {fileID: 1113267636}
+  - {fileID: 1594358958}
+  - {fileID: 1068085369}
+  - {fileID: 1063143818}
 --- !u!1 &1428177036
 GameObject:
   m_ObjectHideFlags: 0
@@ -13685,11 +13749,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1678071447}
   currentRoom: {fileID: 0}
-  playerScript: {fileID: 0}
   lockScreenPanel: {fileID: 956890618}
   submissionPanel: {fileID: 1452047710}
   codeInputField: {fileID: 1128299862}
-  AnomalyToggle: {fileID: 880102743}
+  anomalyToggle: {fileID: 880102743}
 --- !u!1 &1437050898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4316149373729567197, guid: 7151bd28c768642478decee39a4687b0, type: 3}
@@ -15404,7 +15467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Name
-      value: TestGuy3
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: -3404116225781435236, guid: 7151bd28c768642478decee39a4687b0, type: 3}
       propertyPath: m_Layer
@@ -16146,6 +16209,7 @@ MonoBehaviour:
   hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 944873856}
+  difficulty: 1
 --- !u!1 &1596380918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16718,9 +16782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa016e19f05461a41a281d0778ed8404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   winScore: 8
-  playerScript: {fileID: 1711806641}
+  score: 0
+  roomSpawner: {fileID: 1425253033}
 --- !u!1 &1687074930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9152363913774390056, guid: 7151bd28c768642478decee39a4687b0, type: 3}
@@ -17172,7 +17236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711806637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69afe3d22143ba148b6699b302ebd5ff, type: 3}
   m_Name: 
