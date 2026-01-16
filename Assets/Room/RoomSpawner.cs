@@ -154,7 +154,7 @@ public class RoomSpawner : MonoBehaviour
 
     // Handle Teleportation
     private void ExecuteTeleport(RoomState targetRoom)
-    {
+    {   
         controller.enabled = false;
         RoomState[] sceneRooms = FindObjectsOfType<RoomState>(true);
         foreach (RoomState rs in sceneRooms) rs.gameObject.SetActive(false);

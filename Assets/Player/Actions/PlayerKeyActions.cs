@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -37,15 +38,7 @@ public class Player : MonoBehaviour
 
             if (openTab == false)
             {
-                mouseLook.enabled = false;
-                // Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-                print("pressed");
-                UiTablet.SetActive(true);
-                tabletUI.ShowLockScreen();
-                tabletUI.codeInputField.ActivateInputField();
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = false;
-                openTab = true;
+               OpenTablet();
             }
             else
             {
@@ -55,20 +48,24 @@ public class Player : MonoBehaviour
         }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-
-
-
-
-
-
-
     }
 
+    public void OpenTablet()
+    {
+        mouseLook.enabled = false;
+        // Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        print("pressed");
+        UiTablet.SetActive(true);
+        tabletUI.ShowLockScreen();
+        tabletUI.codeInputField.ActivateInputField();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+        openTab = true;
+    }
     public void CloseTablet()
     {
         openTab = false;
         UiTablet.SetActive(false);
-
         mouseLook.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
