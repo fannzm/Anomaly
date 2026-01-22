@@ -23,6 +23,7 @@ public class RoomSpawner : MonoBehaviour
     [HideInInspector] private List<RoomState> runtimePool;
 
     private RoomState chosenRoom;
+    private GameObject currentRoomInstance;
     private float w0, w1, w2, w3;
 
     void Awake()
@@ -156,18 +157,23 @@ public class RoomSpawner : MonoBehaviour
     private void ExecuteTeleport(RoomState targetRoom)
     {   
         controller.enabled = false;
-        RoomState[] sceneRooms = FindObjectsOfType<RoomState>(true);
-        foreach (RoomState rs in sceneRooms) rs.gameObject.SetActive(false);
-        targetRoom.gameObject.SetActive(true);
+        
+        if (currentRoomInstance != null)
+        {
+            Destroy(currentRoomInstance);
+        }
+        
+        currentRoomInstance = Instantiate(targetRoom.gameObject);
+        RoomState spawnedRoomState = currentRoomInstance.GetComponent<RoomState>();
 
-        Transform spawn = targetRoom.transform.Find("SpawnPoint");
+        Transform spawn = currentRoomInstance.transform.Find("SpawnPoint");
         if (spawn != null) {
             player.transform.position = spawn.position;
             player.transform.rotation = spawn.rotation;
         }
 
-        tabletUI.currentRoom = targetRoom;
-        gameManager.GenerateNewCode(targetRoom);
+        tabletUI.currentRoom = spawnedRoomState;
+        gameManager.GenerateNewCode(spawnedRoomState);
         Physics.SyncTransforms();
         controller.enabled = true;
     }
