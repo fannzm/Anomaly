@@ -4595,7 +4595,6 @@ GameObject:
   - component: {fileID: 4576418106672546}
   - component: {fileID: 7596267738892305758}
   - component: {fileID: 138510545173424529}
-  - component: {fileID: 5874912460904713178}
   m_Layer: 6
   m_Name: LivingRoom
   m_TagString: Untagged
@@ -4725,33 +4724,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.034752965, y: 0.019999996, z: 0}
   m_Center: {x: -0.005483407, y: 0.001780288, z: 0.008005548}
---- !u!54 &5874912460904713178
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2329144146247349608}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2368530662936073806
 GameObject:
   m_ObjectHideFlags: 0
@@ -7041,7 +7013,6 @@ GameObject:
   - component: {fileID: 8079366971067277256}
   - component: {fileID: 4193226878098281553}
   - component: {fileID: 1068036311438962704}
-  - component: {fileID: 7360407078922871348}
   m_Layer: 6
   m_Name: Hallway
   m_TagString: Untagged
@@ -7129,7 +7100,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7149,33 +7120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   sinkSpeed: 0.05
---- !u!54 &7360407078922871348
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3844249801112355857}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3848938974848833182
 GameObject:
   m_ObjectHideFlags: 0
@@ -7895,7 +7839,6 @@ GameObject:
   - component: {fileID: 3023180168527213311}
   - component: {fileID: 896468418180240357}
   - component: {fileID: 6625341770353698487}
-  - component: {fileID: 6497835594741576144}
   m_Layer: 6
   m_Name: BedRoom
   m_TagString: Untagged
@@ -8025,33 +7968,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015584533, y: 0.009119302, z: 0}
   m_Center: {x: 0.0043738396, y: -0.007070179, z: 0.00800555}
---- !u!54 &6497835594741576144
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4342714598738975957}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4364174987678510374
 GameObject:
   m_ObjectHideFlags: 0
@@ -9658,7 +9574,6 @@ GameObject:
   - component: {fileID: 2425866748311977852}
   - component: {fileID: 720672463800882011}
   - component: {fileID: 7953046808971730311}
-  - component: {fileID: 209115066647133447}
   m_Layer: 6
   m_Name: PcRoom
   m_TagString: Untagged
@@ -9788,33 +9703,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009555792, y: 0.010420146, z: 0}
   m_Center: {x: -0.011084455, y: -0.013721304, z: 0.008005548}
---- !u!54 &209115066647133447
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5693755373915609480}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5781996552506287706
 GameObject:
   m_ObjectHideFlags: 0
