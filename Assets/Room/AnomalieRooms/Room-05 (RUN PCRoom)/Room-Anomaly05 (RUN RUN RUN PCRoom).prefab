@@ -4460,10 +4460,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c703d93e273ef8469186e98506d02c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasAnomaly: 0
+  hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 2408860648153063112}
-  difficulty: 0
+  difficulty: 1
 --- !u!1 &2959872403925490617
 GameObject:
   m_ObjectHideFlags: 0
