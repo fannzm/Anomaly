@@ -26,6 +26,8 @@ public class RoomSpawner : MonoBehaviour
     private GameObject currentRoomInstance;
     private float w0, w1, w2, w3;
 
+    public CutSceneLogic cutscenlogic;
+
     void Awake()
     {
         ResetFullPool();
@@ -54,6 +56,8 @@ public class RoomSpawner : MonoBehaviour
      // Spawn Master Room
     public void SpawnMasterRoom()
     {
+       
+
         RoomState masterRoom = allSourceRooms.Find(r => r.difficulty == 0);
         if (masterRoom != null)
         {
@@ -67,6 +71,8 @@ public class RoomSpawner : MonoBehaviour
      // Main Spawning Logic
     public void SpawnNext()
     {
+       
+
         int nextDiff = GetNextDifficulty();
         List<RoomState> candidates = runtimePool.FindAll(r => r.difficulty == nextDiff);
 

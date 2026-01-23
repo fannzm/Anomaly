@@ -33,6 +33,9 @@ public class TabletUI : MonoBehaviour
     public string defaultName;
     public Texture defaultAvatar;
     public Texture glitchAvatar;
+
+    public CutSceneLogic cutSceneLogic;
+
     void Start()
     {
         ShowLockScreen();
@@ -143,5 +146,22 @@ public class TabletUI : MonoBehaviour
         ShowLockScreen();
         
         playerScript.CloseTablet();
+
+
+
+        if (playerGuessedAnomaly)
+        {
+            cutSceneLogic.PlayDestroyAi();
+        }
+        else 
+        {
+            cutSceneLogic.PlayPackageAi();
+        }
+
+
+
+
+
+
     }
 }
