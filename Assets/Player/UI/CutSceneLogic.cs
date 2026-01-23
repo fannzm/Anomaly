@@ -78,4 +78,13 @@ public class CutSceneLogic : MonoBehaviour
     }
 
 
+
+    public void showScoreScreen()
+    {
+
+
+    }
+
+
+
 }
