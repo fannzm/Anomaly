@@ -18,6 +18,7 @@ public class TabletUI : MonoBehaviour
     public TMP_InputField codeInputField;
     public Toggle anomalyToggle;
     public Image inputFieldImage;
+    public TextMeshProUGUI scoreCounterText;
 
     [Header("Feedback Settings")]
     public Color error = Color.red;
@@ -65,6 +66,11 @@ public class TabletUI : MonoBehaviour
             if (defaultAvatar != null) 
                 userIcon.texture = defaultAvatar;
         }
+    }
+    
+    public void UpdateScoreDisplay(int score)
+    {
+        scoreCounterText.text = score.ToString() + "/8";
     }
 
     public void OnCodeEntered()

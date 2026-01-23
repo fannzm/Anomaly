@@ -10,13 +10,14 @@ public class GameManager : MonoBehaviour
 
     [Header("References")]
     public RoomSpawner roomSpawner;
+    public TabletUI tabletUI;
 
     // Next Room 
     public void CorrectChoice()
     {
         score++;
         Debug.Log("Correct! Current Score: " + score);
-
+        tabletUI.UpdateScoreDisplay(score);
         roomSpawner.RemoveCurrentRoom();
 
         if (score >= winScore)
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         Debug.Log("Wrong Choice! Score reset to 0.");
 
+        tabletUI.UpdateScoreDisplay(score);
         roomSpawner.ResetFullPool();
         roomSpawner.ResetProbabilities();
         roomSpawner.SpawnMasterRoom();
