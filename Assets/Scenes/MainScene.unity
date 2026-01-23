@@ -2454,7 +2454,7 @@ MonoBehaviour:
   winScore: 8
   score: 0
   roomSpawner: {fileID: 1425253033}
-  tabletUI: {fileID: 1428177041}
+  tabletUI: {fileID: 0}
 --- !u!1 &1696850697
 GameObject:
   m_ObjectHideFlags: 0
