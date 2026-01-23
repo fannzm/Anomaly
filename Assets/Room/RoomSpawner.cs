@@ -172,6 +172,15 @@ public class RoomSpawner : MonoBehaviour
             player.transform.rotation = spawn.rotation;
         }
 
+        if (spawnedRoomState.isTabletAnomalyRoom && spawnedRoomState.hasAnomaly)
+        {
+            tabletUI.UpdateUserDisplay(true);
+        }
+        else
+        {
+            tabletUI.UpdateUserDisplay(false);
+        }
+       
         tabletUI.currentRoom = spawnedRoomState;
         gameManager.GenerateNewCode(spawnedRoomState);
         Physics.SyncTransforms();

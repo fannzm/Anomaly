@@ -27,6 +27,11 @@ public class TabletUI : MonoBehaviour
 
     public Player playerScript;
 
+    public TextMeshProUGUI userNameText; 
+    public RawImage userIcon;
+    public string defaultName;
+    public Texture defaultAvatar;
+    public Texture glitchAvatar;
     void Start()
     {
         ShowLockScreen();
@@ -40,6 +45,28 @@ public class TabletUI : MonoBehaviour
         anomalyToggle.isOn = false;
         inputFieldImage.color = normalColor;
     }
+
+    public void UpdateUserDisplay(bool isAnomaly)
+    {
+        if (isAnomaly)
+        {
+            userNameText.text = "USER01001010";
+            userNameText.color = Color.red;
+            
+            if (glitchAvatar != null) 
+                userIcon.texture = glitchAvatar;
+                
+        }
+        else
+        {
+            userNameText.text = defaultName;
+            userNameText.color = Color.black; 
+            
+            if (defaultAvatar != null) 
+                userIcon.texture = defaultAvatar;
+        }
+    }
+
     public void OnCodeEntered()
     {
         if (currentRoom == null) return;

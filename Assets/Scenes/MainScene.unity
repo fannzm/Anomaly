@@ -792,7 +792,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 132.1886, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.565703, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1949,6 +1949,7 @@ MonoBehaviour:
   - {fileID: 2181706352669225892, guid: 9851dcf9a3ff33b449a3016db721c356, type: 3}
   - {fileID: 2181706352669225892, guid: 5eb01601838415b40adc6e8285f9a7ce, type: 3}
   - {fileID: 2181706352669225892, guid: 2c9e04f3490cfdf4a8ad52ae73172284, type: 3}
+  - {fileID: 7553394873894631608, guid: 545c2c6566248924580e86276c2c9c41, type: 3}
 --- !u!1 &1428177036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,6 +2080,11 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   wrongCodeSound: {fileID: 0}
   playerScript: {fileID: 1711806642}
+  userNameText: {fileID: 390577883}
+  userIcon: {fileID: 828173222}
+  defaultName: USER4193025
+  defaultAvatar: {fileID: 2800000, guid: c1af43682608fc246a2b8e455a51f27f, type: 3}
+  glitchAvatar: {fileID: 2800000, guid: 0fe3ff34a429621419010e8185dbfba7, type: 3}
 --- !u!1 &1452047710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2606,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1864484282
 GameObject:
   m_ObjectHideFlags: 0
