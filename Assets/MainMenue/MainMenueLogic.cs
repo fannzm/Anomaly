@@ -11,14 +11,15 @@ public class MainMenueLogic : MonoBehaviour
     float videoTime;
 
     public GameObject MainScreenCanva;
-   
-
+    public GameObject ControlsCanva;
+    public GameObject IntroCanva;
 
     void Start()
     {
         MainScreenCanva.SetActive(true);
-       
-        videoPlayer = GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>();
+        ControlsCanva.SetActive(false);
+        IntroCanva.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -31,7 +32,8 @@ public class MainMenueLogic : MonoBehaviour
     {
 
         MainScreenCanva.SetActive(false);
-        
+        IntroCanva.SetActive(true);
+        videoPlayer = GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>();
         videoPlayer.clip = GetNewAi;
         videoPlayer.Play();
         videoTime = (float)videoPlayer.length;
@@ -44,10 +46,23 @@ public class MainMenueLogic : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void Controls()
+    public void OpenControls()
     {
+        ControlsCanva.SetActive(true);
+
+
 
     }
+    public void CloseControls()
+    {
+        ControlsCanva.SetActive(false);
+
+
+
+    }
+
+
+
     public void Quit()
     {
         Application.Quit();
