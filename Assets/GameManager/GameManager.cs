@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -42,10 +43,11 @@ public class GameManager : MonoBehaviour
         roomSpawner.SpawnMasterRoom();
     }
 
-    // TODO: Win Game
+    // Win Game
     private void WinGame()
     {
         Debug.Log("yay you win!");
+        SceneManager.LoadScene("EndScene");
     }
 
     // Generates a random 4-digit code
