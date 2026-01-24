@@ -7073,7 +7073,7 @@ MonoBehaviour:
   hasAnomaly: 1
   roomCode: 
   codeDisplay: {fileID: 2573986218080921039}
-  difficulty: 0
+  difficulty: 1
   isTabletAnomalyRoom: 0
 --- !u!1 &4144765055458688380
 GameObject:
