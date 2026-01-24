@@ -7091,6 +7091,7 @@ MonoBehaviour:
   roomCode: 
   codeDisplay: {fileID: 2573986218080921039}
   difficulty: 1
+  isTabletAnomalyRoom: 0
 --- !u!1 &4144765055458688380
 GameObject:
   m_ObjectHideFlags: 0
@@ -16967,35 +16968,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.863
+      value: -13.379
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.224
+      value: 2.223999
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.404
+      value: 11.403999
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1498318935631349726, guid: 7b8ab4ed6b0e9134996b563faeb50011, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
