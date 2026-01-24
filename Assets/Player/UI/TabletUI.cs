@@ -19,6 +19,7 @@ public class TabletUI : MonoBehaviour
     public Toggle anomalyToggle;
     public Image inputFieldImage;
     public TextMeshProUGUI scoreCounterText;
+    public TextMeshProUGUI scoreCounterText2;
 
     [Header("Feedback Settings")]
     public Color error = Color.red;
@@ -74,6 +75,7 @@ public class TabletUI : MonoBehaviour
     public void UpdateScoreDisplay(int score)
     {
         scoreCounterText.text = score.ToString() + "/8";
+        scoreCounterText2.text = score.ToString() + "/8";
     }
 
     public void OnCodeEntered()
