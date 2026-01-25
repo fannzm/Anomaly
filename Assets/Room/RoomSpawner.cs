@@ -187,6 +187,21 @@ public class RoomSpawner : MonoBehaviour
             tabletUI.UpdateUserDisplay(false);
         }
        
+        MovementPlayer movementPlayer = player.GetComponent<MovementPlayer>();
+        bool shouldInvert = spawnedRoomState.isInvertedRoom && spawnedRoomState.hasAnomaly;
+
+        if(movementPlayer != null)
+        {
+            
+            movementPlayer.SetInversion(shouldInvert);
+        }
+
+        MouseLook lookScript = player.GetComponentInChildren<MouseLook>(); 
+        if (lookScript != null)
+        {
+            lookScript.SetMouseInversion(shouldInvert);
+        }
+        
         tabletUI.currentRoom = spawnedRoomState;
         gameManager.GenerateNewCode(spawnedRoomState);
         Physics.SyncTransforms();

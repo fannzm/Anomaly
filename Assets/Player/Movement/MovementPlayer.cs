@@ -18,6 +18,7 @@ public class MovementPlayer : MonoBehaviour
     bool isGrounded;
 
     float lockPos = 0;
+    private float movementMultiplier = 1f;
 
     void Update()
     {
@@ -34,8 +35,8 @@ public class MovementPlayer : MonoBehaviour
 
 
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Horizontal") * movementMultiplier;
+        float z = Input.GetAxis("Vertical") * movementMultiplier;
 
 
         if (!isGrounded)
@@ -64,6 +65,11 @@ public class MovementPlayer : MonoBehaviour
 
     }
 
+
+public void SetInversion(bool active)
+    {
+        movementMultiplier = active ? -1f : 1f;
+    }
 
 
 }

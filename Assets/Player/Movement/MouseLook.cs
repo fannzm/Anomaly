@@ -6,6 +6,7 @@ public class MouseLook : MonoBehaviour
 {
 
     public float mouseSensitivity = 100f;
+    private float lookMultiplier = 1f;
 
     public Transform playerBody;
 
@@ -22,8 +23,8 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * lookMultiplier * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * lookMultiplier * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -34,6 +35,10 @@ public class MouseLook : MonoBehaviour
 
     }
 
+    public void SetMouseInversion(bool active)
+    {
+        lookMultiplier = active ? -1f : 1f;
+    }
    
 
 

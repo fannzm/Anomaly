@@ -10,4 +10,5 @@ public class RoomState : MonoBehaviour
     public TextMeshPro codeDisplay;
     public int difficulty; // 0: Master, 1: Easy, 2: Medium, 3: Hard
     public bool isTabletAnomalyRoom;
+    public bool isInvertedRoom;
 }

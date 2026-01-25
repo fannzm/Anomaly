@@ -443,6 +443,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3618047347927231423, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
   m_PrefabInstance: {fileID: 728018674652759727}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &128632262 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2181706352669225892, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
+  m_PrefabInstance: {fileID: 728018674652759727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128632260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c703d93e273ef8469186e98506d02c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170961839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2176,7 @@ MonoBehaviour:
   tabletUI: {fileID: 1428177041}
   gameManager: {fileID: 1678071447}
   allSourceRooms:
-  - {fileID: 2181706352669225892, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
+  - {fileID: 128632262}
   cutscenlogic: {fileID: 328797561}
 --- !u!1 &1428177036
 GameObject:
