@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2164,8 +2164,7 @@ MonoBehaviour:
   tabletUI: {fileID: 1428177041}
   gameManager: {fileID: 1678071447}
   allSourceRooms:
-  - {fileID: 8392340114788317569}
-  - {fileID: 2181706352669225892, guid: 31be46d3f7156914bb9f54885c677a9d, type: 3}
+  - {fileID: 2181706352669225892, guid: 34cd572df15e73c4d8099b8a23624b5c, type: 3}
   cutscenlogic: {fileID: 328797561}
 --- !u!1 &1428177036
 GameObject:
@@ -2293,6 +2292,7 @@ MonoBehaviour:
   anomalyToggle: {fileID: 880102743}
   inputFieldImage: {fileID: 1128299863}
   scoreCounterText: {fileID: 2051860071}
+  scoreCounterText2: {fileID: 1696850699}
   error: {r: 1, g: 0, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   audioSource: {fileID: 0}
@@ -2683,7 +2683,7 @@ GameObject:
   - component: {fileID: 1696850700}
   - component: {fileID: 1696850699}
   m_Layer: 0
-  m_Name: ScoreCounter
+  m_Name: ScoreCounter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3631,17 +3631,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
---- !u!114 &8392340114788317569 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2181706352669225892, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
-  m_PrefabInstance: {fileID: 728018674652759727}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128632260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c703d93e273ef8469186e98506d02c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
