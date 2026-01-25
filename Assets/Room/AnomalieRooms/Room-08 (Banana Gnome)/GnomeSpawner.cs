@@ -15,8 +15,11 @@ public class GnomeSpawner : MonoBehaviour
         {
             if (gnomePrefab != null && spawnPoint != null)
             {
-                Instantiate(gnomePrefab, spawnPoint.position, spawnPoint.rotation);
+                var newGnome = Instantiate(gnomePrefab, spawnPoint.position, spawnPoint.rotation);
                 hasSpawned = true; // nur einmal spawnen
+
+                newGnome.transform.parent = gameObject.transform;
+
             }
         }
     }
