@@ -360,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 33904215406806661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.23, y: 1.01, z: 8.25}
+  m_LocalPosition: {x: 17.23, y: 1.49, z: 8.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7327,6 +7327,7 @@ MonoBehaviour:
   codeDisplay: {fileID: 2573986218080921039}
   difficulty: 2
   isTabletAnomalyRoom: 0
+  isInvertedRoom: 0
 --- !u!1 &4144765055458688380
 GameObject:
   m_ObjectHideFlags: 0
@@ -13091,7 +13092,7 @@ Transform:
   m_GameObject: {fileID: 6659347410676095874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.29, y: 0.13, z: 7.14}
+  m_LocalPosition: {x: 17.29, y: 0.41, z: 7.14}
   m_LocalScale: {x: 7.37, y: 0.96, z: 10.14}
   m_ConstrainProportionsScale: 0
   m_Children: []
