@@ -11140,6 +11140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8317105536804590899}
   - component: {fileID: 2623233980974621634}
+  - component: {fileID: 25937372845898798}
   m_Layer: 6
   m_Name: Boombox
   m_TagString: Untagged
@@ -11176,7 +11177,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 933d35501fefad24ab45716d7d27a464, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -11261,6 +11262,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &25937372845898798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210821065155037708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3419f71680c48564ca4a168890159491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioSource: {fileID: 2623233980974621634}
 --- !u!1 &6213480957410957882
 GameObject:
   m_ObjectHideFlags: 0

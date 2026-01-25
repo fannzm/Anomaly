@@ -218,6 +218,13 @@ public class RoomSpawner : MonoBehaviour
         
         tabletUI.currentRoom = spawnedRoomState;
         gameManager.GenerateNewCode(spawnedRoomState);
+        
+        RadioAnomaly radio = currentRoomInstance.GetComponentInChildren<RadioAnomaly>();
+        if (radio != null)
+        {
+            radio.TurnOnRadio();
+        }
+        
         Physics.SyncTransforms();
         controller.enabled = true;
     }
