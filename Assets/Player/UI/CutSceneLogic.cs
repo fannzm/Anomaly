@@ -16,11 +16,16 @@ public class CutSceneLogic : MonoBehaviour
     public VideoClip GetNewAi;
     public VideoClip DeleteAi;
     public VideoClip PackageAi;
+    public VideoClip BetweenAnimation;
+
+    bool skipable;
+
 
     float videoTime;
 
     void Start()
     {
+        skipable = false;
         Player = GameObject.Find("Player");
         Rooms = GameObject.Find("Rooms");
         CutSceneCanvas = GameObject.Find("CutSceneCanvas");
@@ -32,12 +37,29 @@ public class CutSceneLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (skipable) {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                PlayGetAi();
+            }
+        }
     }
     
 
+    public void PlayBetween()
+    {
+        
+        videoPlayer.clip = BetweenAnimation;
+        videoPlayer.Play();
+        videoTime = (float)videoPlayer.length;
+        Invoke("SetSkipable", videoTime);
+    }
+
+    public void SetSkipable() {  skipable = true; }
+
     public void PlayGetAi()
     {
+        skipable = false;
         PauseGame();
         videoPlayer.clip = GetNewAi;        
         videoPlayer.Play();
@@ -45,21 +67,27 @@ public class CutSceneLogic : MonoBehaviour
         Invoke("UnPauseGame", videoTime);
 
     }
+
+
+
     public void PlayDestroyAi()
     {
         PauseGame();
         videoPlayer.clip = DeleteAi;
         videoPlayer.Play();
         videoTime = (float)videoPlayer.length;
-        Invoke("PlayGetAi", videoTime);
+        Invoke("PlayBetween", videoTime);
     }
+
+
+
     public void PlayPackageAi()
     {
         PauseGame();
         videoPlayer.clip = PackageAi;
         videoPlayer.Play();
         videoTime = (float)videoPlayer.length;
-        Invoke("PlayGetAi", videoTime);
+        Invoke("PlayBetween", videoTime);
     }
 
 
@@ -79,12 +107,7 @@ public class CutSceneLogic : MonoBehaviour
 
 
 
-    public void showScoreScreen()
-    {
-
-
-    }
-
+    
 
 
 }
