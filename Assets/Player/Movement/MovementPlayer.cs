@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
+   
+
     public CharacterController controller;
 
     public float speed = 12.0f;
