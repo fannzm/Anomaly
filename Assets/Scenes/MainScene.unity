@@ -2164,7 +2164,7 @@ MonoBehaviour:
   tabletUI: {fileID: 1428177041}
   gameManager: {fileID: 1678071447}
   allSourceRooms:
-  - {fileID: 2181706352669225892, guid: 34cd572df15e73c4d8099b8a23624b5c, type: 3}
+  - {fileID: 2181706352669225892, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
   cutscenlogic: {fileID: 328797561}
 --- !u!1 &1428177036
 GameObject:
