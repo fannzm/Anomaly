@@ -25,8 +25,16 @@ public class GameManager : MonoBehaviour
 
     public void CorrectChoice()
     {
-        score++;
-        Debug.Log("Correct! Current Score: " + score);
+        if (tabletUI.currentRoom != null && tabletUI.currentRoom.difficulty == -1)
+        {
+            Debug.Log("Tutorial done!");
+        }
+        else
+        {
+            score++;
+            Debug.Log("Correct! Current Score: " + score);
+        }
+        
         tabletUI.UpdateScoreDisplay(score);
         roomSpawner.RemoveCurrentRoom();
 

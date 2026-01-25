@@ -17,6 +17,7 @@ public class RoomSpawner : MonoBehaviour
     public CharacterController controller;
     public TabletUI tabletUI;
     public GameManager gameManager;
+    public RoomState tutorialRoomPrefab;
 
     [Header("Room Pool")]
     public List<RoomState> allSourceRooms; 
@@ -36,9 +37,22 @@ public class RoomSpawner : MonoBehaviour
 
     void Start()
     {
-        SpawnMasterRoom();
+        if (tutorialRoomPrefab != null)
+        {
+            SpawnTutorial();
+        }
+        else
+        {
+            SpawnMasterRoom();
+        }
     }
     
+    public void SpawnTutorial()
+    {
+        chosenRoom = tutorialRoomPrefab;
+        ExecuteTeleport(chosenRoom);
+    }
+
     // Refill Pool
     public void ResetFullPool()
     {
