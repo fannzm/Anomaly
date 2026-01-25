@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
     public RoomSpawner roomSpawner;
     public TabletUI tabletUI;
 
+
+
     // Next Room 
     private void Awake()
     {
-        QualitySettings.vSyncCount = 0; 
+        QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
     }
 
