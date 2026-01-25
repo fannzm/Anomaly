@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -443,17 +443,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3618047347927231423, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
   m_PrefabInstance: {fileID: 728018674652759727}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &128632262 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2181706352669225892, guid: c98bc6ba6bdee4a428d8887a427e8845, type: 3}
-  m_PrefabInstance: {fileID: 728018674652759727}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128632260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c703d93e273ef8469186e98506d02c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &170961839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,34 +3320,7 @@ MonoBehaviour:
   gameManager: {fileID: 1678071447}
   tutorialRoomPrefab: {fileID: 2181706352669225892, guid: 34cd572df15e73c4d8099b8a23624b5c, type: 3}
   allSourceRooms:
-  - {fileID: 128632262}
-  - {fileID: 4128898855466434648, guid: 50fafea8327a2664684a07ec8487de45, type: 3}
   - {fileID: 1513021764094003410, guid: e3b4a04678230ad47b24857bcdccd692, type: 3}
-  - {fileID: 5411693136997886847, guid: 008fd2c6bee1edf47b7bb71edf6f4715, type: 3}
-  - {fileID: 7667409048748399479, guid: b1bf14b47dcd0ad489e5a943955cff99, type: 3}
-  - {fileID: 2181706352669225892, guid: 0e0462c48636ac0428c4d831f6b68c32, type: 3}
-  - {fileID: 2181706352669225892, guid: 7a0cf0bfd7625054fbceef0641d3b7da, type: 3}
-  - {fileID: 2181706352669225892, guid: 9851dcf9a3ff33b449a3016db721c356, type: 3}
-  - {fileID: 2181706352669225892, guid: 5eb01601838415b40adc6e8285f9a7ce, type: 3}
-  - {fileID: 2181706352669225892, guid: 2c9e04f3490cfdf4a8ad52ae73172284, type: 3}
-  - {fileID: 7553394873894631608, guid: 545c2c6566248924580e86276c2c9c41, type: 3}
-  - {fileID: 2181706352669225892, guid: f74760305383a884cbf240763dac49b4, type: 3}
-  - {fileID: 2181706352669225892, guid: 91e5076e2d8e4fd4da37fc86a11b4f1d, type: 3}
-  - {fileID: 2181706352669225892, guid: 6aa1ddec868faa641a37dddba369a1c1, type: 3}
-  - {fileID: 2181706352669225892, guid: a9f8dc2b95090a445a86046a828c200d, type: 3}
-  - {fileID: 2181706352669225892, guid: f22b4eb604477db4ab51474a9324e4d4, type: 3}
-  - {fileID: 2181706352669225892, guid: 20d28d96589a9324483b605bec3532a8, type: 3}
-  - {fileID: 2181706352669225892, guid: 31be46d3f7156914bb9f54885c677a9d, type: 3}
-  - {fileID: 2181706352669225892, guid: 180944f123e190842a1469fdeb4e7e72, type: 3}
-  - {fileID: 2181706352669225892, guid: a467b372006a2be4e9a34d4c3f2147a2, type: 3}
-  - {fileID: 2181706352669225892, guid: d7b9021675c5f5c4fb01af688f644b66, type: 3}
-  - {fileID: 2181706352669225892, guid: d770b145c2573f848bc4903ed7445200, type: 3}
-  - {fileID: 1154825031173727924, guid: b36461efe801bbf49b47b34e961ff7b6, type: 3}
-  - {fileID: 7999924397587026389, guid: b364180d89aee824aa01febcda843b34, type: 3}
-  - {fileID: 2887869320828645528, guid: 51f61857ce45b2e42b176f3b0ed0c977, type: 3}
-  - {fileID: 2981828381127820114, guid: aa9a5598c90dee44f814ac8de54cb68f, type: 3}
-  - {fileID: 1488319769893431538, guid: 703a12f1dcc1d3849a13d0735e5ecc2d, type: 3}
-  - {fileID: 5952042120044892278, guid: 09f849cef074e03408abec05ac33c483, type: 3}
   cutscenlogic: {fileID: 328797561}
 --- !u!1 &1428177036
 GameObject:

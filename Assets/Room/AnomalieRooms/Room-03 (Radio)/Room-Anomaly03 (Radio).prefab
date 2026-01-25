@@ -1789,6 +1789,8 @@ MonoBehaviour:
   roomCode: 
   codeDisplay: {fileID: 6742336752104129036}
   difficulty: 3
+  isTabletAnomalyRoom: 0
+  isInvertedRoom: 0
 --- !u!1 &890946270062907456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11183,8 +11185,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.025
-  MaxDistance: 0.03
+  MinDistance: 0.05
+  MaxDistance: 0.15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
