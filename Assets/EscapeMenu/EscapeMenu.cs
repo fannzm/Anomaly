@@ -15,6 +15,7 @@ public class EscapeMenu : MonoBehaviour
     {
         EscapeMenuCanvas.SetActive(false);
         ControlsCanvas.SetActive(false);
+        AudioListener.pause = false;
     }
 
     // Update is called once per frame
@@ -42,6 +43,8 @@ public class EscapeMenu : MonoBehaviour
             EscapeMenuCanvas.SetActive(true);
             Time.timeScale = 0f; 
 
+            AudioListener.pause = true;
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -51,6 +54,8 @@ public class EscapeMenu : MonoBehaviour
             ControlsCanvas.SetActive(false);
 
             Time.timeScale = 1f;
+
+            AudioListener.pause = false;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -78,6 +83,7 @@ public class EscapeMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+        AudioListener.pause = false;
         
         SceneManager.LoadScene(mainMenuSceneName);
     }
