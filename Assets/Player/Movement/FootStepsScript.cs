@@ -8,6 +8,8 @@ public class FoodStepsScript : MonoBehaviour
     public AudioSource audioSource;
     
     public bool isPLaying;
+
+   
     
     void Start()
     {
