@@ -609,6 +609,7 @@ MonoBehaviour:
   GetNewAi: {fileID: 32900000, guid: 2111042fc3434fb4e8152e5550e64181, type: 3}
   DeleteAi: {fileID: 32900000, guid: 5cc0c38630d56bf498771bf4083e98b6, type: 3}
   PackageAi: {fileID: 32900000, guid: 5ad67b5a31eb1444394d41925326b59f, type: 3}
+  BetweenAnimation: {fileID: 32900000, guid: 8bee7fb9cbbd64442b13094b92525943, type: 3}
 --- !u!4 &328797562
 Transform:
   m_ObjectHideFlags: 0
