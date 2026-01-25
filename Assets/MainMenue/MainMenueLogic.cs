@@ -13,13 +13,14 @@ public class MainMenueLogic : MonoBehaviour
     public GameObject MainScreenCanva;
     public GameObject ControlsCanva;
     public GameObject IntroCanva;
+    public GameObject CreditsCanva;
 
     void Start()
     {
         MainScreenCanva.SetActive(true);
         ControlsCanva.SetActive(false);
         IntroCanva.SetActive(false);
-        
+        CreditsCanva.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,16 +50,19 @@ public class MainMenueLogic : MonoBehaviour
     public void OpenControls()
     {
         ControlsCanva.SetActive(true);
-
-
-
     }
     public void CloseControls()
     {
         ControlsCanva.SetActive(false);
+    }
+    public void OpenCredits()
+    {
+        CreditsCanva.SetActive(true);
+    }
 
-
-
+    public void CloseCredits()
+    {
+        CreditsCanva.SetActive(false);
     }
 
 
