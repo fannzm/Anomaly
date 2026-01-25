@@ -15,8 +15,11 @@ public class MainMenueLogic : MonoBehaviour
     public GameObject IntroCanva;
     public GameObject CreditsCanva;
 
+    public GameObject AmbientSound;
+
     void Start()
     {
+        AmbientSound.SetActive(true);
         MainScreenCanva.SetActive(true);
         ControlsCanva.SetActive(false);
         IntroCanva.SetActive(false);
@@ -31,7 +34,7 @@ public class MainMenueLogic : MonoBehaviour
 
     public void StarGame()
     {
-
+        AmbientSound.SetActive(false);
         MainScreenCanva.SetActive(false);
         IntroCanva.SetActive(true);
         videoPlayer = GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>();
